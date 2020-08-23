@@ -5,8 +5,7 @@ const Bot = new Discord.Client();
 const Token = process.env.TOKEN;
 
 Bot.on('ready', () => {
-  let guilds = Bot.guilds.cache.size;
-  console.log(`${Bot.user.username} online...\nPresence in server ${guilds}`);
+  console.log(`${Bot.user.username} online...\nPresence in server ${Bot.guilds.cache.size}`);
 });
 
 Bot.login(Token);
